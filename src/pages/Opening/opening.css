@@ -1,0 +1,178 @@
+@font-face {
+  font-family: 'SFDistantGalaxyOutline';
+  src: url(/fonts/SFDistantGalaxyOutline.ttf);
+}
+
+body {
+  margin: 0;
+  background: black;
+}
+
+.container {
+  margin: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  background-image: url('/images/background.png');
+  background-size: 500px 500px;
+  background-repeat: repeat;
+}
+
+.skip-onboarding {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  font-family: Century Gothic, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #ffe81f;
+  animation: skip 2s ease-out 13s forwards;
+  z-index: 0;
+  opacity: 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+@keyframes skip {
+  0% {
+    opacity: 0;
+    z-index: 0;
+  }
+  100% {
+    opacity: 1;
+    z-index: 10;
+  }
+}
+
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: white;
+}
+
+/* Set the animation, color, size and hide the text */
+.intro {
+  position: absolute;
+  z-index: 1;
+  animation: intro 6s ease-out 1s;
+  opacity: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: 'center';
+}
+
+.intro p {
+  display: inline-block;
+  font-family: Times New Roman;
+  margin: auto;
+  color: rgb(75, 213, 238);
+  font-weight: 400;
+  font-size: 200%;
+  text-align: left;
+  user-select: none;
+}
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Set the animation & hide the logo */
+.logo {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin: auto;
+  animation: logo 9s ease-out 9s;
+  opacity: 0;
+}
+
+.logo svg {
+  width: inherit;
+  user-select: none;
+}
+
+/* Scale the logo down and maintain it centered */
+@keyframes logo {
+  0% {
+    width: 18em;
+    transform: scale(10);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+    width: 18em;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.1);
+    width: 18em;
+  }
+}
+
+p {
+  color: #ffe81f;
+}
+
+/* Set the font, lean the board, position it */
+#board {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  transform: perspective(300px) rotateX(25deg);
+  transform-origin: 50% 100%;
+  text-align: justify;
+  position: absolute;
+  margin-left: -9em;
+  font-weight: bold;
+  overflow: hidden;
+  font-size: 350%;
+  height: 50em;
+  width: 18em;
+  bottom: 0;
+  left: 50%;
+  user-select: none;
+}
+
+#board:after {
+  position: absolute;
+  content: ' ';
+  bottom: 60%;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+/* Set the scrolling animation and position it */
+#content {
+  animation: scroll 100s linear 16s;
+  position: absolute;
+  top: 100%;
+}
+
+#title,
+#subtitle {
+  text-align: center;
+}
+
+@keyframes scroll {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: -170%;
+  }
+}
