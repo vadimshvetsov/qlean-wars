@@ -4,6 +4,7 @@
   "description": "A workshop with Bounty Hunters for getting money back from debtors",
   "keywords": [],
   "main": "src/index.js",
+  "homepage": "https://vadimshvetsov.github.io/qlean-wars",
   "dependencies": {
     "@arwes/arwes": "1.0.0-alpha.8",
     "@arwes/sounds": "1.0.0-alpha.1",
@@ -11,10 +12,9 @@
     "@types/react-dom": "16.0.9",
     "axios": "0.18.0",
     "axios-mock-adapter": "1.15.0",
-    "eslint-import-resolver-webpack": "^0.10.1",
+    "gh-pages": "^2.0.1",
     "ramda": "0.25.0",
     "react": "16.6.1",
-    "react-cache": "16.6.0-alpha.8af6728",
     "react-dom": "16.6.1",
     "react-redux": "5.1.0",
     "react-scripts": "2.0.5",
@@ -38,7 +38,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     ">0.2%",
