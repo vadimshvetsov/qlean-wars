@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { navigate } from '@reach/router';
 import styled from 'styled-components';
 import {
@@ -13,7 +12,6 @@ import {
 } from '@arwes/arwes';
 
 import axios from 'data/api';
-import * as mapDispatchToProps from 'sagas';
 import { startHunting } from 'utils/hunting';
 
 import BountyHunterProvider from 'modules/BountyHunterProvider';
@@ -93,12 +91,14 @@ class Hunter extends Component {
   };
 
   onHuntingFinish = ({ isDeveloperCaught, isBountyHunterEliminated }) => {
-    const { id, fetchBountyHunters, fetchDevelopers } = this.props;
+    const { id } = this.props;
     if (isDeveloperCaught) {
-      catchDeveloper(this.state.selectedDeveloperId).then(fetchDevelopers);
+      catchDeveloper(this.state.selectedDeveloperId);
+      // Invalidate developers
     }
     if (isBountyHunterEliminated) {
-      eliminateBountyHunter(id).then(fetchBountyHunters);
+      eliminateBountyHunter(id);
+      // Invalidate bounty hunters
       navigateToBountyHunters();
     }
     this.setState({
@@ -192,7 +192,4 @@ class Hunter extends Component {
   }
 }
 
-export default connect(
-  null,
-  mapDispatchToProps,
-)(withStyles(styles)(Hunter));
+export default withStyles(styles)(Hunter);

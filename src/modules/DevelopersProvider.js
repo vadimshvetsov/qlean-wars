@@ -1,36 +1,16 @@
-import { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Suspense } from 'react';
 
-import { selectors } from 'reducers';
-import * as mapDispatchToProps from 'sagas';
+import cache, { developersResource } from 'store/cache';
 
-class DevelopersProvider extends Component {
-  componentDidMount() {
-    const {
-      fetchDevelopers,
-      developersStruct: { data },
-    } = this.props;
-    if (!data) {
-      fetchDevelopers();
-    }
-  }
+const AsyncDevelopers = ({ children }) => {
+  const data = developersResource.read(cache);
+  return children(data.data);
+};
 
-  render() {
-    const {
-      developersStruct: { isFetching, data },
-      renderLoader,
-    } = this.props;
-    if (!isFetching && !data) return null;
-    if (isFetching && renderLoader) return renderLoader();
-    return this.props.children(data);
-  }
-}
+const DevelopersProvider = ({ renderLoader, children }) => (
+  <Suspense fallback={renderLoader()}>
+    <AsyncDevelopers>{children}</AsyncDevelopers>
+  </Suspense>
+);
 
-const mapStateToProps = state => ({
-  developersStruct: selectors.getDevelopers(state),
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(DevelopersProvider);
+export default DevelopersProvider;

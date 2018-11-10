@@ -1,18 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import React, { unstable_ConcurrentMode as ConcurrentMode } from 'react';
+import { unstable_createRoot as createRoot } from 'react-dom';
 import { Router } from '@reach/router';
 import styled from 'styled-components';
 import { ThemeProvider, createTheme, Arwes } from '@arwes/arwes';
 import { SoundsProvider, createSounds } from '@arwes/sounds';
 
-import configureStore from 'store/configureStore';
-
 import Opening from 'pages/Opening';
 import Hunters from 'pages/Hunters';
 import Hunter from 'pages/Hunter';
-
-const store = configureStore();
 
 const StyledContainer = styled.div`
   margin: 30px;
@@ -45,8 +40,8 @@ const HuntersRoutes = () => (
       >
         <StyledContainer>
           <Router>
-            <Hunters path="/" />
-            <Hunter path=":id" />
+            <Hunters path="/"/>
+            <Hunter path=":id"/>
           </Router>
         </StyledContainer>
       </Arwes>
@@ -56,15 +51,17 @@ const HuntersRoutes = () => (
 
 function App() {
   return (
-    <Provider store={store}>
-      <Router>
-        <Opening path="/" />
-        <HuntersRoutes path="hunters/*" />
-      </Router>
-    </Provider>
+    <Router>
+      <Opening path="/"/>
+      <HuntersRoutes path="hunters/*"/>
+    </Router>
   );
 }
 
 const rootElement = document.getElementById('root');
 
-ReactDOM.render(<App />, rootElement);
+createRoot(rootElement).render(
+  <ConcurrentMode>
+    <App/>
+  </ConcurrentMode>,
+);

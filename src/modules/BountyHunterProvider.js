@@ -1,38 +1,16 @@
-import { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Suspense } from 'react';
 
-import { selectors } from 'reducers';
-import * as mapDispatchToProps from 'sagas';
+import cache, { bountyHunterResource } from 'store/cache';
 
-class BountyHunterProvider extends Component {
-  componentDidMount() {
-    const {
-      fetchBountyHunter,
-      bountyHunterStruct: { data },
-      id,
-    } = this.props;
-    if (!data) {
-      fetchBountyHunter(id);
-    }
-  }
+const AsyncBountyHunter = ({ children, id }) => {
+  const data = bountyHunterResource.read(cache, id);
+  return children(data.data);
+};
 
-  render() {
-    const {
-      bountyHunterStruct: { isFetching, data },
-      renderLoader,
-      children,
-    } = this.props;
-    if (!isFetching && !data) return null;
-    if (isFetching && renderLoader) return renderLoader();
-    return children(data);
-  }
-}
+const BountyHunterProvider = ({ id, children, renderLoader }) => (
+  <Suspense fallback={renderLoader()} maxDuration={0}>
+    <AsyncBountyHunter id={id}>{children}</AsyncBountyHunter>
+  </Suspense>
+);
 
-const mapStateToProps = (state, { id }) => ({
-  bountyHunterStruct: selectors.getBountyHunter(id)(state),
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(BountyHunterProvider);
+export default BountyHunterProvider;
