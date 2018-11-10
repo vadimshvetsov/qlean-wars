@@ -12,6 +12,7 @@
     "@types/react-dom": "16.0.9",
     "axios": "0.18.0",
     "axios-mock-adapter": "1.15.0",
+    "gh-pages": "^2.0.1",
     "ramda": "0.25.0",
     "react": "16.6.1",
     "react-cache": "16.6.0-alpha.8af6728",
