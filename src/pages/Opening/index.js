@@ -10,8 +10,8 @@ import './opening.css';
 
 const audio = new Audio('/sounds/theme.mp3');
 const title = 'Episode I';
-const subtitle = "THE CODER'S MENACE";
-const content = 'Turmoil has engulfed the Galactic Republic as Christopher Kade finishes studying to become a master in his trade.';
+const subtitle = 'THE PHANTOM MENACE';
+const content = 'Turmoil has engulfed the Earth. The taxation of trade routes to outlying star systems is in dispute. Hoping to resolve the matter with a moving to another office, Qlean has lost all frontend developers among the galaxy. While the congress of the Republic endlessly debates this alarming chain of events, escunk has secretly gave a task to Jabba the Hutt, a powerful crime lord within the galaxy, to regain the loss....';
 
 class Opening extends Component {
   componentDidMount() {
