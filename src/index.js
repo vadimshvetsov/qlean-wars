@@ -45,8 +45,8 @@ const HuntersRoutes = () => (
       >
         <StyledContainer>
           <Router>
-            <Hunters path="/" />
-            <Hunter path=":id" />
+            <Hunters path="/"/>
+            <Hunter path=":id"/>
           </Router>
         </StyledContainer>
       </Arwes>
@@ -58,8 +58,8 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
-        <Opening path="/" />
-        <HuntersRoutes path="hunters/*" />
+        <Opening path="/"/>
+        <HuntersRoutes path="hunters/*"/>
       </Router>
     </Provider>
   );
@@ -67,4 +67,4 @@ function App() {
 
 const rootElement = document.getElementById('root');
 
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<App/>, rootElement);

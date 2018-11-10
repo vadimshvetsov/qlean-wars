@@ -17,7 +17,7 @@ class BountyHuntersProvider extends Component {
   }
 
   onBountyHunterClick = id => () => {
-    navigate(`hunters/${id}`);
+    navigate(`/hunters/${id}`);
   };
 
   getPropsAndHelpers() {
