@@ -8,7 +8,7 @@ const AsyncBountyHunter = ({ children, id }) => {
 };
 
 const BountyHunterProvider = ({ id, children, renderLoader }) => (
-  <Suspense fallback={renderLoader()} maxDuration={0}>
+  <Suspense fallback={renderLoader()}>
     <AsyncBountyHunter id={id}>{children}</AsyncBountyHunter>
   </Suspense>
 );

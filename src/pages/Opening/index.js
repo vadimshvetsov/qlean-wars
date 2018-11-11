@@ -11,7 +11,6 @@ import './opening.css';
 const audio = new Audio('/sounds/theme.mp3');
 const title = 'Episode I';
 const subtitle = 'THE PHANTOM MENACE';
-const content = 'Turmoil has engulfed the Earth. The taxation of trade routes to outlying star systems is in dispute. Hoping to resolve the matter with a moving to another office, Qlean has lost all frontend developers among the galaxy. While the congress of the Republic endlessly debates this alarming chain of events, escunk has secretly gave a task to Jabba the Hutt, a powerful crime lord within the galaxy, to regain the loss....';
 
 class Opening extends Component {
   componentDidMount() {
@@ -74,7 +73,17 @@ class Opening extends Component {
             <p id="title">{title}</p>
             <p id="subtitle">{subtitle}</p>
             <br/>
-            <p>{content}</p>
+            <p>
+              Turmoil has engulfed the Earth. The taxation of trade routes to
+              outlying star systems is in dispute. Hoping to resolve the matter
+              with a moving to another office, Qlean has lost all frontend
+              developers among the galaxy.
+              <br/>
+              <br/>
+              While the congress of the Republic endlessly debates this alarming
+              chain of events, escunk has secretly gave a task to Jabba the Hutt,
+              a powerful crime lord within the galaxy, to regain the loss....
+            </p>
           </div>
         </div>
       </div>
