@@ -1,13 +1,14 @@
 {
-  "main.css": "/qlean-wars/static/css/main.b5c8b6de.chunk.css",
-  "main.js": "/qlean-wars/static/js/main.bf6d1eef.chunk.js",
-  "main.js.map": "/qlean-wars/static/js/main.bf6d1eef.chunk.js.map",
+  "main.css": "/qlean-wars/static/css/main.3fb61cd7.chunk.css",
+  "main.js": "/qlean-wars/static/js/main.b636880d.chunk.js",
+  "main.js.map": "/qlean-wars/static/js/main.b636880d.chunk.js.map",
   "static/js/1.4b199f61.chunk.js": "/qlean-wars/static/js/1.4b199f61.chunk.js",
   "static/js/1.4b199f61.chunk.js.map": "/qlean-wars/static/js/1.4b199f61.chunk.js.map",
   "runtime~main.js": "/qlean-wars/static/js/runtime~main.f6e82def.js",
   "runtime~main.js.map": "/qlean-wars/static/js/runtime~main.f6e82def.js.map",
-  "static/css/main.b5c8b6de.chunk.css.map": "/qlean-wars/static/css/main.b5c8b6de.chunk.css.map",
+  "static/css/main.3fb61cd7.chunk.css.map": "/qlean-wars/static/css/main.3fb61cd7.chunk.css.map",
+  "static/media/opening.css": "/qlean-wars/static/media/SFDistantGalaxyOutline.9652b3f0.ttf",
   "index.html": "/qlean-wars/index.html",
-  "precache-manifest.c47ef8360a866ecaa090cd98cdf950ce.js": "/qlean-wars/precache-manifest.c47ef8360a866ecaa090cd98cdf950ce.js",
+  "precache-manifest.7c8fefdd590a969e56045995fdacf741.js": "/qlean-wars/precache-manifest.7c8fefdd590a969e56045995fdacf741.js",
   "service-worker.js": "/qlean-wars/service-worker.js"
 }
