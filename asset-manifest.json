@@ -1,14 +1,14 @@
 {
-  "main.css": "/qlean-wars/static/css/main.3fb61cd7.chunk.css",
-  "main.js": "/qlean-wars/static/js/main.b636880d.chunk.js",
-  "main.js.map": "/qlean-wars/static/js/main.b636880d.chunk.js.map",
-  "static/js/1.4b199f61.chunk.js": "/qlean-wars/static/js/1.4b199f61.chunk.js",
-  "static/js/1.4b199f61.chunk.js.map": "/qlean-wars/static/js/1.4b199f61.chunk.js.map",
+  "main.css": "/qlean-wars/static/css/main.cc5e9c5d.chunk.css",
+  "main.js": "/qlean-wars/static/js/main.6d814b40.chunk.js",
+  "main.js.map": "/qlean-wars/static/js/main.6d814b40.chunk.js.map",
+  "static/js/1.22e21ddb.chunk.js": "/qlean-wars/static/js/1.22e21ddb.chunk.js",
+  "static/js/1.22e21ddb.chunk.js.map": "/qlean-wars/static/js/1.22e21ddb.chunk.js.map",
   "runtime~main.js": "/qlean-wars/static/js/runtime~main.f6e82def.js",
   "runtime~main.js.map": "/qlean-wars/static/js/runtime~main.f6e82def.js.map",
-  "static/css/main.3fb61cd7.chunk.css.map": "/qlean-wars/static/css/main.3fb61cd7.chunk.css.map",
-  "static/media/opening.css": "/qlean-wars/static/media/SFDistantGalaxyOutline.9652b3f0.ttf",
+  "static/css/main.cc5e9c5d.chunk.css.map": "/qlean-wars/static/css/main.cc5e9c5d.chunk.css.map",
+  "static/media/opening.css": "/qlean-wars/static/media/background.cb163de3.png",
   "index.html": "/qlean-wars/index.html",
-  "precache-manifest.7c8fefdd590a969e56045995fdacf741.js": "/qlean-wars/precache-manifest.7c8fefdd590a969e56045995fdacf741.js",
+  "precache-manifest.2cfdc8f6bdfe353138715d0e44057e7d.js": "/qlean-wars/precache-manifest.2cfdc8f6bdfe353138715d0e44057e7d.js",
   "service-worker.js": "/qlean-wars/service-worker.js"
 }
