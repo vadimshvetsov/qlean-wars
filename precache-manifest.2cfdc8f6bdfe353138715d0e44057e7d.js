@@ -12,19 +12,19 @@ self.__precacheManifest = [
     "url": "/qlean-wars/static/js/runtime~main.f6e82def.js"
   },
   {
-    "revision": "a35fdf872adb64896d64",
-    "url": "/qlean-wars/static/js/main.a35fdf87.chunk.js"
+    "revision": "6d814b4026397d64beb9",
+    "url": "/qlean-wars/static/js/main.6d814b40.chunk.js"
   },
   {
     "revision": "22e21ddb3474035e724b",
     "url": "/qlean-wars/static/js/1.22e21ddb.chunk.js"
   },
   {
-    "revision": "a35fdf872adb64896d64",
+    "revision": "6d814b4026397d64beb9",
     "url": "/qlean-wars/static/css/main.cc5e9c5d.chunk.css"
   },
   {
-    "revision": "03018ff2f69fb467891d0bb3ad6be6d5",
+    "revision": "ffb95656420d229491357e5b5a101614",
     "url": "/qlean-wars/index.html"
   }
 ];
