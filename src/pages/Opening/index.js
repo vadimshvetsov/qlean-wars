@@ -8,7 +8,7 @@ import './opening.css';
  *  https://dev.to/christopherkade/developing-the-star-wars-opening-crawl-in-htmlcss-2j9e
  */
 
-const audio = new Audio('/sounds/theme.mp3');
+const audio = new Audio(`${process.env.PUBLIC_URL}/sounds/theme.mp3`);
 const title = 'Episode I';
 const subtitle = 'THE PHANTOM MENACE';
 
@@ -30,7 +30,7 @@ class Opening extends Component {
   }
 
   skipOnboarding = () => {
-    navigate('/hunters');
+    navigate(`${process.env.PUBLIC_URL}/hunters`);
   };
 
   render() {

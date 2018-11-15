@@ -22,14 +22,14 @@ const sounds = {
   shared: { volume: 1 },
   players: {
     click: {
-      sound: { src: ['/sounds/click.mp3'] },
+      sound: { src: [`${process.env.PUBLIC_URL}/sounds/click.mp3`] },
     },
     typing: {
-      sound: { src: ['/sounds/typing.mp3'] },
+      sound: { src: [`${process.env.PUBLIC_URL}/sounds/typing.mp3`] },
       settings: { oneAtATime: true },
     },
     deploy: {
-      sound: { src: ['/sounds/deploy.mp3'] },
+      sound: { src: [`${process.env.PUBLIC_URL}/sounds/deploy.mp3`] },
       settings: { oneAtATime: true },
     },
   },
@@ -40,13 +40,13 @@ const HuntersRoutes = () => (
     <SoundsProvider sounds={createSounds(sounds)}>
       <Arwes
         animate
-        background="/images/background.jpg"
-        pattern="/images/glow.png"
+        background={`${process.env.PUBLIC_URL}/images/background.jpg`}
+        pattern={`${process.env.PUBLIC_URL}/images/glow.png`}
       >
         <StyledContainer>
           <Router>
-            <Hunters path="/"/>
-            <Hunter path=":id"/>
+            <Hunters path={`${process.env.PUBLIC_URL}/`}/>
+            <Hunter path={`${process.env.PUBLIC_URL}/:id`}/>
           </Router>
         </StyledContainer>
       </Arwes>
@@ -58,8 +58,8 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
-        <Opening path="/"/>
-        <HuntersRoutes path="hunters/*"/>
+        <Opening path={`${process.env.PUBLIC_URL}/`}/>
+        <HuntersRoutes path={`${process.env.PUBLIC_URL}/hunters/*`}/>
       </Router>
     </Provider>
   );
