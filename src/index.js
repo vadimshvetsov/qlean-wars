@@ -45,8 +45,8 @@ const HuntersRoutes = () => (
       >
         <StyledContainer>
           <Router>
-            <Hunters path={`${process.env.PUBLIC_URL}/`}/>
-            <Hunter path={`${process.env.PUBLIC_URL}/:id`}/>
+            <Hunters path="/"/>
+            <Hunter path="/:id"/>
           </Router>
         </StyledContainer>
       </Arwes>
