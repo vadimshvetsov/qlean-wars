@@ -2,7 +2,7 @@ export const bountyHunters = {
   1: {
     id: 1,
     name: 'Boba Fett',
-    image: '/images/fett.png',
+    image: `${process.env.PUBLIC_URL}/images/fett.png`,
     accuracy: 10,
     speed: 8,
     tracing: 6,
@@ -10,7 +10,7 @@ export const bountyHunters = {
   2: {
     id: 2,
     name: 'Bossk',
-    image: '/images/bossk.png',
+    image: `${process.env.PUBLIC_URL}/images/bossk.png`,
     accuracy: 8,
     speed: 6,
     tracing: 10,
@@ -18,7 +18,7 @@ export const bountyHunters = {
   3: {
     id: 3,
     name: 'Dengar',
-    image: '/images/dengar.png',
+    image: `${process.env.PUBLIC_URL}/images/dengar.png`,
     accuracy: 8,
     speed: 8,
     tracing: 8,
@@ -26,7 +26,7 @@ export const bountyHunters = {
   4: {
     id: 4,
     name: 'Greedo',
-    image: '/images/greedo.png',
+    image: `${process.env.PUBLIC_URL}/images/greedo.png`,
     accuracy: 6,
     speed: 8,
     tracing: 10,
@@ -34,7 +34,7 @@ export const bountyHunters = {
   5: {
     id: 5,
     name: 'IG-88',
-    image: '/images/ig-88.png',
+    image: `${process.env.PUBLIC_URL}/images/ig-88.png`,
     accuracy: 10,
     speed: 7,
     tracing: 7,
@@ -42,7 +42,7 @@ export const bountyHunters = {
   6: {
     id: 6,
     name: '4-LOM',
-    image: '/images/4-lom.png',
+    image: `${process.env.PUBLIC_URL}/images/4-lom.png`,
     accuracy: 7,
     speed: 9,
     tracing: 8,
@@ -133,5 +133,12 @@ export const developers = {
     escaping: 8,
     avoiding: 7,
     hiding: 9,
+  },
+  13: {
+    id: 13,
+    name: 'lamdadelta34',
+    escaping: 6,
+    avoiding: 8,
+    hiding: 10,
   },
 };

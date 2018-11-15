@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'SFDistantGalaxyOutline';
-  src: url(/fonts/SFDistantGalaxyOutline.ttf);
+  src: url(./SFDistantGalaxyOutline.ttf);
 }
 
 body {
@@ -12,7 +12,7 @@ body {
   margin: 0;
   min-width: 100%;
   min-height: 100vh;
-  background-image: url('/images/background.png');
+  background-image: url('./background.png');
   background-size: 500px 500px;
   background-repeat: repeat;
 }

@@ -61,7 +61,7 @@ const StyledSmallSpinnerContainer = styled.div`
 `;
 
 const navigateToBountyHunters = () => {
-  navigate('/hunters');
+  navigate(`${process.env.PUBLIC_URL}/hunters`);
 };
 
 class Hunter extends Component {

@@ -10,7 +10,7 @@ const AsyncBountyHunters = ({ children }) => {
 };
 
 const onBountyHunterClick = id => () => {
-  navigate(`/hunters/${id}`);
+  navigate(`${process.env.PUBLIC_URL}/hunters/${id}`);
 };
 
 const BountyHuntersProvider = ({ children, renderLoader }) => (
