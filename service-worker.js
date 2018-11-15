@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/qlean-wars/precache-manifest.f1a557ec25b5a902848a514a5b542b25.js"
+  "/qlean-wars/precache-manifest.40b96712dfdcc842238f4a19e3367988.js"
 );
 
 workbox.clientsClaim();
